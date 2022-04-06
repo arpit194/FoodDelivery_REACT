@@ -10,8 +10,11 @@ const HeaderCartButton = (props) => {
   const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
     return curNumber + item.amount;
   }, 0);
+
+  const buttonClasses = `${classes.button} `;
+
   return (
-    <button className={classes.button} onClick={props.onClick}>
+    <button className={buttonClasses} onClick={props.onClick}>
       <span className={classes.icon}>
         <CartIcon />
       </span>
